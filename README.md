@@ -43,10 +43,6 @@ Stop & Remove
     docker stop cart-svc
     docker rm cart-svc
 
-Start "Ill" Pod
-
-    docker run -d --name cart-svc -p 9082:9080 japu/cart-svc --env IS_ILL_POD=true
-
 ### Publish Image
 
     docker login

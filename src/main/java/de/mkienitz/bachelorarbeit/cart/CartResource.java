@@ -25,10 +25,11 @@ public class CartResource {
     @GET
     @Operation(description = "Get shopping cart")
     @Produces(MediaType.APPLICATION_JSON)
-    public Response getShoppingCart(@QueryParam("seed") String seed) {
-        if(seed == null) {
-            seed = "12345678";
+    @Path("/{shoppingCartId}")
+    public Response getShoppingCart(@PathParam("shoppingCartId") String shoppingCartId) {
+        if(shoppingCartId == null) {
+            shoppingCartId = "12345678";
         }
-        return Response.ok(service.getShoppingCart(seed)).build();
+        return Response.ok(service.getShoppingCart(shoppingCartId)).build();
     }
 }

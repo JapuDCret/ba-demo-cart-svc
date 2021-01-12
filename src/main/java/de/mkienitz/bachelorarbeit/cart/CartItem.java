@@ -1,8 +1,11 @@
 package de.mkienitz.bachelorarbeit.cart;
 
 public class CartItem {
+
     protected int id;
+
     protected String translationKey;
+
     protected double price;
 
     public CartItem(int id, String translationKey, double price) {

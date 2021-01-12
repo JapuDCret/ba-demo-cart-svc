@@ -36,7 +36,7 @@ Liberty Dev Mode (test changes on the fly)
 
 Start
 
-    docker run -d --name cart-svc -p 9082:9080 japu/cart-svc
+    docker run -d --name cart-svc -p 9082:9080 --net=bridge japu/cart-svc
 
 Stop & Remove
 

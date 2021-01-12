@@ -21,8 +21,8 @@ public class CartService {
         add(new CartItem(7, "item.watermelon", 2.20));
     }};
 
-    public ShoppingCart getShoppingCart(String seed) {
-        final Random rnd = new Random(seed.hashCode());
+    public ShoppingCart getShoppingCart(String shoppingCartId) {
+        final Random rnd = new Random(shoppingCartId.hashCode());
 
         final int numOfItems = 3 + rnd.nextInt(3);
 
@@ -48,7 +48,7 @@ public class CartService {
 
             items.add(new ShoppingCartItem(item, rAmount));
         }
-        ShoppingCart shoppingCart = new ShoppingCart(items);
+        ShoppingCart shoppingCart = new ShoppingCart(shoppingCartId, items);
 
         return shoppingCart;
     }

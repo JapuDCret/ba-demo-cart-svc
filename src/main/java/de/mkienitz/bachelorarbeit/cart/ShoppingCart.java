@@ -3,10 +3,25 @@ package de.mkienitz.bachelorarbeit.cart;
 import java.util.List;
 
 public class ShoppingCart {
+
+    private String shoppingCartId;
+
     private List<ShoppingCartItem> items;
 
-    public ShoppingCart(List<ShoppingCartItem> items) {
+    public ShoppingCart() {
+    }
+
+    public ShoppingCart(String shoppingCartId, List<ShoppingCartItem> items) {
+        this.shoppingCartId = shoppingCartId;
         this.items = items;
+    }
+
+    public String getShoppingCartId() {
+        return shoppingCartId;
+    }
+
+    public void setShoppingCartId(String shoppingCartId) {
+        this.shoppingCartId = shoppingCartId;
     }
 
     public List<ShoppingCartItem> getItems() {
@@ -20,7 +35,8 @@ public class ShoppingCart {
     @Override
     public String toString() {
         return "ShoppingCart{" +
-                "items=" + items +
+                "shoppingCartId='" + shoppingCartId + '\'' +
+                ", items=" + items +
                 '}';
     }
 }

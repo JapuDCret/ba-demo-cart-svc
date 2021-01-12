@@ -23,8 +23,8 @@ public class CartResource {
     private CartService service;
 
     @GET
-    @Operation(description = "Get translations")
-    @Produces(MediaType.APPLICATION_JSON + "; charset=UTF-8")
+    @Operation(description = "Get shopping cart")
+    @Produces(MediaType.APPLICATION_JSON)
     public Response getShoppingCart(@QueryParam("seed") String seed) {
         if(seed == null) {
             seed = "12345678";

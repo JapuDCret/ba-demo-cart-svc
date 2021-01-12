@@ -15,6 +15,7 @@ public class CartSvcRestApplication extends Application {
         Set<Class<?>> s = new HashSet<Class<?>>();
 
         s.add(CORSFilter.class);
+        s.add(CartResource.class);
 
         return s;
     }

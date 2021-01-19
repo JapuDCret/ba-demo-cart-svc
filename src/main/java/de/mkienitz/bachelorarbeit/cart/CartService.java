@@ -1,5 +1,6 @@
 package de.mkienitz.bachelorarbeit.cart;
 
+import org.eclipse.microprofile.opentracing.Traced;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -21,6 +22,7 @@ public class CartService {
         add(new CartItem(7, "item.watermelon", 2.20));
     }};
 
+    @Traced(operationName = "CartService.getShoppingCart")
     public ShoppingCart getShoppingCart(String shoppingCartId) {
         final Random rnd = new Random(shoppingCartId.hashCode());
 

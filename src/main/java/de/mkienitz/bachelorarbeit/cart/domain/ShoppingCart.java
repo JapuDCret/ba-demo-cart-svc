@@ -1,4 +1,4 @@
-package de.mkienitz.bachelorarbeit.cart;
+package de.mkienitz.bachelorarbeit.cart.domain;
 
 import java.util.List;
 

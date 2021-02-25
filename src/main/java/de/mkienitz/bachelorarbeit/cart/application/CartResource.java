@@ -15,10 +15,10 @@ import javax.ws.rs.core.Response;
 @RequestScoped
 public class CartResource {
 
-    private static final Logger logger = LoggerFactory.getLogger(CartResource.class.getName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(CartResource.class.getName());
 
     @Inject
-    private CartService service;
+    private CartApplicationService service;
 
     @GET
     @Operation(description = "Get shopping cart")

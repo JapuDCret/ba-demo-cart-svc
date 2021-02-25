@@ -1,4 +1,6 @@
-package de.mkienitz.bachelorarbeit.cart.application;
+package de.mkienitz.bachelorarbeit.cart;
+
+import de.mkienitz.bachelorarbeit.cart.application.CartResource;
 
 import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;
